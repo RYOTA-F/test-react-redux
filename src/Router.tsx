@@ -1,11 +1,11 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
+import ActionTest from './components/pages/ActionTest'
 import Test from './components/pages/Test'
-import Test2 from './components/pages/Test2'
 
 export const Path = {
+  action_test: '/action_test',
   test: '/test',
-  test2: '/test2',
 }
 
 export class Routes extends React.Component<{}, {}> {
@@ -14,9 +14,9 @@ export class Routes extends React.Component<{}, {}> {
       <div>
         <BrowserRouter>
           <Switch>
+            <Route exact path={Path.action_test} component={ActionTest} />
             <Route exact path={Path.test} component={Test} />
-            <Route exact path={Path.test2} component={Test2} />
-            <Redirect to={Path.test} />
+            <Redirect to={Path.action_test} />
           </Switch>
         </BrowserRouter>
       </div>
