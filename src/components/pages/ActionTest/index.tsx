@@ -3,13 +3,15 @@
  * @package Component
  */
 import React from 'react'
+/* components */
+import ActionTestLayout from '../../templates/ActionTestLayout'
 
 /**
  * @param props TProps
  * @returns
  */
 const ActionTest: React.FC = () => {
-  return <div>ActionTest</div>
+  return <ActionTestLayout />
 }
 
 export default ActionTest
