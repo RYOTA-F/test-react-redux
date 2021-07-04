@@ -1,25 +1,26 @@
 import React from 'react'
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
+import { Route, Switch } from 'react-router'
 import ActionTest from './components/pages/ActionTest'
 import Test from './components/pages/Test'
+import Login from './components/pages/Login'
+import Home from './components/pages/Home'
 
 export const Path = {
   action_test: '/action_test',
   test: '/test',
+  login: '/login',
+  home: '/',
 }
 
-export class Routes extends React.Component<{}, {}> {
-  render() {
-    return (
-      <div>
-        <BrowserRouter>
-          <Switch>
-            <Route exact path={Path.action_test} component={ActionTest} />
-            <Route exact path={Path.test} component={Test} />
-            <Redirect to={Path.action_test} />
-          </Switch>
-        </BrowserRouter>
-      </div>
-    )
-  }
+const Router = () => {
+  return (
+    <Switch>
+      <Route exact path={Path.action_test} component={ActionTest}></Route>
+      <Route exact path={Path.test} component={Test}></Route>
+      <Route exact path={Path.login} component={Login}></Route>
+      <Route exact path={Path.home} component={Home}></Route>
+    </Switch>
+  )
 }
+
+export default Router
