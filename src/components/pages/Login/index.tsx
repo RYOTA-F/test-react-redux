@@ -5,7 +5,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { push } from 'connected-react-router'
-import { IRootState } from '../../../reducks/types'
+import { IRootState } from '@types'
 
 /**
  * @param props TProps

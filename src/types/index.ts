@@ -3,7 +3,7 @@ export interface IRouterLocation {
   pathname: string
   query: object
   search: string
-  state: any
+  state: object
 }
 
 export interface IRouter {
@@ -19,5 +19,4 @@ export interface IUsers {
 
 export interface IRootState {
   router: IRouter
-  users: IUsers
 }
