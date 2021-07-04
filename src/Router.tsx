@@ -8,7 +8,7 @@ import Home from './components/pages/Home'
 export const Path = {
   action_test: '/action_test',
   test: '/test',
-  login: '/hoge',
+  login: '/login',
   home: '/',
 }
 

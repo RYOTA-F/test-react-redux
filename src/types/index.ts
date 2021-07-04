@@ -1,3 +1,5 @@
+import { IUsers } from '../reducks/users/types'
+
 export interface IRouterLocation {
   hash: string
   pathname: string
@@ -11,12 +13,7 @@ export interface IRouter {
   location: IRouterLocation
 }
 
-export interface IUsers {
-  isSignedIn: boolean
-  uid: string
-  username: string
-}
-
 export interface IRootState {
   router: IRouter
+  users: IUsers
 }

@@ -6,6 +6,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { push } from 'connected-react-router'
 import { IRootState } from '@types'
+import { signInAction } from '../../../reducks/users/actions'
 
 /**
  * @param props TProps
@@ -20,7 +21,19 @@ const Login: React.FC = () => {
   return (
     <div>
       <h2>ログイン</h2>
-      <button onClick={() => dispatch(push('/'))}>ログイン</button>
+      <button
+        onClick={() => {
+          dispatch(
+            signInAction({
+              uid: '0001',
+              username: 'hoge',
+            })
+          )
+          dispatch(push('/'))
+        }}
+      >
+        ログイン
+      </button>
     </div>
   )
 }
