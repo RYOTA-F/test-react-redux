@@ -14,6 +14,8 @@ const ActionTestLayout: React.FC = () => {
   const dispatch = useDispatch()
   const selector = useSelector((state) => state)
 
+  console.log(selector)
+
   return (
     <div>
       <button
