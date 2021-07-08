@@ -15,10 +15,10 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react",
-    "baseUrl": ".",
-    "paths": {
-      "@types": ["src/types"]
-    }
+    "baseUrl": "."
+    // "paths": {
+    //   "@types": ["src/types"]
+    // }
   },
   "include": ["src"]
 }

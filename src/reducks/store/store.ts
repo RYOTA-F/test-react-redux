@@ -6,6 +6,7 @@ import {
   // DevTool用
   compose,
 } from 'redux'
+import thunk from 'redux-thunk'
 import { connectRouter, routerMiddleware } from 'connected-react-router'
 import { UserResucer } from '../users/reducers'
 
@@ -34,7 +35,7 @@ export default function createStore(history: any) {
     // DevTool用の設定
     composeReduxDevToolsEnhancers(
       // ルーターに利用することを宣言しておく
-      applyMiddleware(routerMiddleware(history))
+      applyMiddleware(routerMiddleware(history), thunk)
     )
   )
 }
